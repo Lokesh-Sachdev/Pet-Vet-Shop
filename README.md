@@ -30,8 +30,7 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
   - `/components`: React components for different sections of the application.
   - `/auth`: Contains the authentication logic and components.
   - `/routes`: Custom route components for handling protected routes.
-  - `/services`: Simulated service data.
-  - `/styles`: CSS files for styling components.
+  - `/utils`: Simulated service data.
   - `/App.js`: Root component of the application.
   - `/index.js`: Entry point of the React app.
 
