@@ -1,12 +1,12 @@
 // data.js
 
 export const customers = [
-    { id: 1, name: 'John Doe', email: 'john@example.com' },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
-    { id: 3, name: 'Johnny Deoo', email: 'johnny@example.com' },
-    { id: 4, name: 'Wil Smith', email: 'will@example.com' },
-    { id: 5, name: 'Adam Anderson', email: 'adam@example.com' },
-    { id: 6, name: 'Sam Sharma', email: 'sam@example.com' },
+    { id: 1, name: 'John Doe', email: 'john@example.com', petName: 'Dolly' },
+    { id: 2, name: 'Jane Smith', email: 'jane@example.com', petName: 'Jacky' },
+    { id: 3, name: 'Johnny Deoo', email: 'johnny@example.com', petName: 'Jammy' },
+    { id: 4, name: 'Wil Smith', email: 'will@example.com', petName: 'Easter' },
+    { id: 5, name: 'Adam Anderson', email: 'adam@example.com', petName: 'Marshal' },
+    { id: 6, name: 'Sam Sharma', email: 'sam@example.com', petName: 'Scooby' },
     // ...more customers
   ];
   

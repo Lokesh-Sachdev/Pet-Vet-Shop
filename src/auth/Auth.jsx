@@ -6,6 +6,7 @@ const Auth = ({ isLoggedIn, setIsLoggedIn }) => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateEmail = () => {
@@ -36,9 +37,36 @@ const Auth = ({ isLoggedIn, setIsLoggedIn }) => {
     }
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (validateEmail() && validatePassword()) {
-      setIsLoggedIn(true);
+      setIsLoading(true);
+
+      const requestBody = {
+        email,
+        password,
+      };
+
+      try {
+        const response = await fetch(
+          'https://64e702f7b0fd9648b78f2e71.mockapi.io/sign',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestBody),
+          }
+        );
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        } else {
+          console.error('Authentication Failed');
+        }
+      } catch (error) {
+        console.error('Error during Authentication:', error);
+      }
+      setIsLoading(false);
     }
   };
 
@@ -49,7 +77,7 @@ const Auth = ({ isLoggedIn, setIsLoggedIn }) => {
 
   return (
     <div className="auth_container">
-      <h1>Login</h1>
+      <h1>Sign In</h1>
       {isLoggedIn ? (
         <div>
           <p>Welcome! You are logged in.</p>
@@ -76,8 +104,12 @@ const Auth = ({ isLoggedIn, setIsLoggedIn }) => {
             onBlur={validatePassword}
           />
           {passwordError && <p className="error">{passwordError}</p>}
-          <button className="sign_btn" onClick={() => handleLogin()}>
-            Sign In
+          <button
+            className="sign_btn"
+            onClick={handleLogin}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Signing In' : 'Sign In'}
           </button>
         </div>
       )}

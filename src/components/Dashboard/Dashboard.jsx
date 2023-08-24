@@ -30,7 +30,7 @@ const Dashboard = ({ isLoggedIn, setIsLoggedIn }) => {
             {isLoggedIn ? (
               <Link onClick={handleLogout}>Logout</Link>
             ) : (
-              <Link to="/auth">Login</Link>
+              <Link to="/auth">Sign In</Link>
             )}
           </li>
         </ul>
