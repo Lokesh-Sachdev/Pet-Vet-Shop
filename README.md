@@ -42,8 +42,8 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
 ## Usage
 
 1. Authentication
-  * Access the /auth route to Sign in or register.
-  * Once logged in, navigate to different sections of the dashboard.
+   * Access the /auth route to Sign in or register.
+   * Once logged in, navigate to different sections of the dashboard.
 
 2. Customer Pets
    * View a list of customer pets on the dashboard.
