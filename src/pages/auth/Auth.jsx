@@ -60,6 +60,7 @@ const Auth = ({ isLoggedIn, setIsLoggedIn }) => {
 
         if (response.ok) {
           setIsLoggedIn(true);
+          navigate('/');
         } else {
           console.error('Authentication Failed');
         }

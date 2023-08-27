@@ -18,4 +18,62 @@ export const customers = [
     { id: 5, name: 'Adoptions', price: 0, image: 'https://octanecdn.com/forevervetscom/Where_to_Adopt_Dog_Jacksonville.jpg' },
     // ...more services
   ];
+
+  export const brands = [
+    {
+      logo: require('../assets/Nature_s_Hug.webp'),
+      name: `Nature's Hug`,
+      discount: 'Up to 10% Off',
+    },
+    {
+      logo: require('../assets/loveabowl.webp'),
+      name: 'Loveabowl',
+      discount: 'New Launch',
+    },
+    {
+      logo: require('../assets/farmina.webp'),
+      name: 'Farmina',
+      discount: 'Flat 10% Off',
+    },
+    {
+      logo: require('../assets/pedigree.webp'),
+      name: 'Pedigree',
+      discount: 'Up to 15% off',
+    },
+    {
+      logo: require('../assets/RC.webp'),
+      name: 'Royal Canin',
+      discount: 'Flat 15% off',
+    },
+    {
+      logo: require('../assets/orijen.webp'),
+      name: 'Orijen',
+      discount: 'Fresh Stock',
+    },
+    {
+      logo: require('../assets/signature.webp'),
+      name: 'Signature',
+      discount: 'Up to 10% off',
+    },
+    {
+      logo: require('../assets/kennel_kitchen.webp'),
+      name: 'Kennel Kitchen',
+      discount: 'up to 20% off',
+    },
+    {
+      logo: require('../assets/acana.webp'),
+      name: 'Acana',
+      discount: 'Fresh Stock',
+    },
+    {
+      logo: require('../assets/whiskas.webp'),
+      name: 'Whiskas',
+      discount: 'up to 17% off',
+    },
+    {
+      logo: require('../assets/schesir.webp'),
+      name: 'Schesir',
+      discount: 'Up tp 30% off',
+    },
+  ];
   

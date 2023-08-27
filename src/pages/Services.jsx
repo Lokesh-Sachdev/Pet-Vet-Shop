@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { getServices } from '../utils/services';
-import ServiceCard from './Card/ServiceCard';
+import ServiceCard from '../components/Card/ServiceCard';
 
 function Services() {
   const [services, setServices] = useState([]);
   const [serviceName, setServiceName] = useState('');
   const [servicePrice, setServicePrice] = useState('');
+  const [imgAddress, setImgAddress] = useState('');
   const [editingServiceIndex, setEditingServiceIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,6 +21,7 @@ function Services() {
       const serviceToEdit = services[index];
       setServiceName(serviceToEdit.name);
       setServicePrice(serviceToEdit.price);
+      setImgAddress(serviceToEdit.image);
       setEditingServiceIndex(index);
     } else {
       clearForm();
@@ -36,6 +38,7 @@ function Services() {
     const newService = {
       name: serviceName,
       price: servicePrice,
+      image: imgAddress,
     };
 
     setServices([...services, newService]);
@@ -48,6 +51,7 @@ function Services() {
       id: services[editingServiceIndex].id,
       name: serviceName,
       price: servicePrice,
+      image: imgAddress,
     };
 
     setServices(editedService);
@@ -69,6 +73,7 @@ function Services() {
   const clearForm = () => {
     setServiceName('');
     setServicePrice('');
+    setImgAddress('');
     setEditingServiceIndex(null);
   };
 
@@ -96,7 +101,7 @@ function Services() {
               <h3 className="modal_header">
                 {editingServiceIndex !== null ? 'Edit' : 'Add'} Service
               </h3>
-              <div>
+              <div className="modal__input-container">
                 <input
                   type="text"
                   placeholder="Service Name"
@@ -109,6 +114,14 @@ function Services() {
                   value={servicePrice}
                   onChange={(e) => setServicePrice(e.target.value)}
                 />
+                <input
+                  type="text"
+                  placeholder="https://google.com/image.jpg"
+                  value={imgAddress}
+                  onChange={(e) => setImgAddress(e.target.value)}
+                />
+              </div>
+              <div>
                 <button
                   className="edit_btn"
                   onClick={

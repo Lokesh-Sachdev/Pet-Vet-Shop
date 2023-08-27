@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css'; // Your custom CSS
-import Home from './components/Home/Home';
+import Home from './pages/Home/Home';
+import CustomerPets from './pages/CustomerPets';
+import Services from './pages/Services';
 import Dashboard from './components/Dashboard/Dashboard';
 import Auth from './auth/Auth';
-import CustomerPets from './components/CustomerPets';
-import Services from './components/Services';
 import ProtectedRoute from './routes/ProtectedRoute';
 
 const App = () => {
