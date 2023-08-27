@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import CustomerPets from './pages/CustomerPets';
 import Services from './pages/Services';
 import Dashboard from './components/Dashboard/Dashboard';
-import Auth from './auth/Auth';
+import Auth from './pages/auth/Auth';
 import ProtectedRoute from './routes/ProtectedRoute';
 
 const App = () => {
