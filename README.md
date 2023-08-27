@@ -1,6 +1,6 @@
 # Pet Veterinary Shop Dashboard
 
-Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managing customers and services provided by a pet veterinary shop.
+Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managing customers and services a pet veterinary shop provides.
 
 ## Features
 
@@ -8,7 +8,7 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
 - **Dashboard:** A modern and innovative dashboard interface for managing customer pets and services.
 - **Protected Routes:** Secure navigation to customer pets and services pages with an authentication check.
 - **Customer Pets:** View a list of customer pets along with their names and emails.
-- **Services:** Explore a list of services provided by the veterinary shop and their prices.
+- **Services:** Explore a list of services the veterinary shop provides and their prices.
 
 ## Getting Started
 
@@ -28,6 +28,7 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
 
 - `/src`: Source code directory.
   - `/components`: React components for different application sections.
+  - `/pages`: Contains page components like Home.
   - `/auth`: Contains the authentication logic and components.
   - `/routes`: Custom route components for handling protected routes.
   - `/utils`: Simulated service data.
@@ -38,6 +39,8 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
 
 - React
 - React Router DOM
+- React Icons
+- Swiper
 
 ## Usage
 
@@ -47,7 +50,7 @@ Welcome to the Pet Veterinary Shop Dashboard, a React.js application for managin
 
 2. Customer Pets
    * View a list of customer pets on the dashboard.
-   * Click "Add Pet" to add a new pet to the list.
+   * Click "Add Pet" to add a new pet.
    * Click "Edit" to modify the pet's details.
    * Click "Delete" to remove a pet from the list.
 
